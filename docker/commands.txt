@@ -1,0 +1,37 @@
+docker images -> to list docker images
+docker ps -> to list containers
+docker run image-name --> you se the log
+docker run -d image-name -> you will see only the id of the container
+restart docker container :
+1.do docker ps
+2.docker stop container-id
+3.docker start same-container-id
+
+ now if you forget the same container id, you will see docker ps -a. you will see the status exited of stopped containers
+
+docker run -p6000:6379 image name
+6000 is the host port
+6379 is the container port
+you do this because suppose 2 containers are running on same port. how do u call them ? so you bind them with host port. one hostport allows only one container. and then you call the container using the host port
+docker rmi
+docker image save -> will save it in a tar
+docker image history -> show history of an image
+
+docker logs container-id
+renaming of docker image:
+1. docker ps
+2. stop the container
+3. docker run --name newname oldname
+
+docker exec -it containerid /bin/bash
+
+docker nw : the containers inside a nw can talk to eachother using names. no port/host reqd .
+docker network ls
+docker create network my-network
+you can add a container to a network using --net in docker run commad
+docker compose : helps to make large docker run command in a yaml file. all the containers which are getting created within a single docker compose file,
+they will be created inside one nw only.so you dont need to use --net inside docker compose.
+docker-compose -f filename up -> this is how you run a dockercompose file to create containers
+docker-compose -f filename down -> this is how you run a dockercompose file to delete containers, it also deletes the network
+
+docker build -t myapp:version-1 . (last full stop is the path of dockerfile, you can specify a path if that is in a diff location)

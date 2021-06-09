@@ -1,0 +1,5 @@
+start you script with :
+#!/bin/bash
+
+end with exit 0
+drwxr-xr-x -> d means directory, next three is the perm for file owner, next 3 perm for owner group, next 3 for other outside the grp

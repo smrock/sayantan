@@ -1,0 +1,36 @@
+board
+repo
+pipeline
+test plan 
+artifact
+
+organisation->project->team
+reader,contributor, admin
+
+different boards : basic,agile,scrum,cnmi
+
+
+basic :
+
+board : epic - inside epic you have issues, inside issue you have task. task is the smallest unit
+backlog : product - all the work items to build a product, sprint - everything which are on todo list
+
+agile :
+epic->feature->user story->task
+                           bug->task (you create bug under user story)
+issue (independent)
+test plan -> test suit-> test case -> shared steps and share parameters
+
+cmmi:
+epic->feature->requirement->task
+                            bug->task
+feedback request->feedback response
+code review req-> code review response
+test plan -> test suit-> test case -> shared steps and share parameters
+independent work items -> issue, change req, review, task
+
+scrum :
+epic->feature->product backlog item->task
+                                     bug->task
+test plan -> test suit-> test case -> shared steps and share parameters
+idependent work item : impediment -> if your work has some dependencies on some other items
